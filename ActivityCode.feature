@@ -37,7 +37,7 @@ Feature: FEATURE Create Custom Activity Code
 
         # Field : Description (Screen : ACV2 / ZLIBACT) (Data type : ATT Alphanumeric None ) (Options : ) ()
         Given the user selects the text field with name: "Description"
-        When the user writes "Test" to the selected text field
+        When the user writes "PreSales Demo" to the selected text field
 
         # Field : Active (Screen : ACV2 / FLACT) (Data type : M1 Local menu Check box ) (Options : ) ()
         Given the user selects the check box with name: "Active"
