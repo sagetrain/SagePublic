@@ -30,7 +30,7 @@ Feature: FEATURE ATP_PATCH
         And the user clicks on "Server" radio button of the selected radio buttons group
         Then the radio button "Server" of the selected radio buttons group is selected
 
-        # Field : Patch (Screen : PATCH / VOLFIL) (Data type :  ASTO Alphanumeric None ) (Options : ) ()
+        # Field : Patch (Screen : PATCH / VOLFIL)  (Data type :  ASTO Alphanumeric None ) (Options : ) ()
         Given the user selects the text field with name: "Patch"
         When the user writes "[PATCH]" to the selected text field
         And the user hits tab
