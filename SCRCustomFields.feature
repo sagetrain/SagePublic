@@ -1,8 +1,8 @@
 # ##############################################################################
-# Script      : ATP_GESATB_OATB
+# Script      : SCRCustomFields.feature
 # Date        : 03/09/23 18:35:54
-# Author      : Administrateur système (ADMIN)
-# Comment     : Table dictionary (Table dictionary)
+# Author      : Jason Holstrom
+# Comment     : Table dictionary columns to existing tables.
 # Version     : 2.9.05
 # ##############################################################################
 
