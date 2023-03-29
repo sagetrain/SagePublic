@@ -2,7 +2,7 @@
 # Script      : X2-ActivityCode
 # Date        : 03/09/23 18:17:07
 # Author      : Jason Holstrom
-# Comment     : Activity codes (Activity codes) 
+# Comment     : Activity codes (Activity codes)
 # ##############################################################################
 
 # #############################################################################
