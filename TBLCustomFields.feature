@@ -40,8 +40,8 @@ Feature: FEATURE ATP_GESATB_OATB
         #Then the user hits escape
         # Table : (Screen : ATB2 / NBZONE) (Options : SKARIDB1C+T?)
         Given the user selects the fixed data table for x3 field name: "ATB2_ARRAY_NBZONE"
-        And the user sets rows to display to 500
 
+        And the user sets rows to display to 500
 
         # Field : Column (Screen : ATB2 / CODZONE) (Data type : AVA Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
         When the user selects last fixed cell with header: "Column"
@@ -56,9 +56,9 @@ Feature: FEATURE ATP_GESATB_OATB
         When the user selects last editable cell with column header: "Length"
         Then the user adds the text <LONG> in selected cell
 
+        # Field : Activity (Screen : ATB3 / CODACT) (Data type : ACV Alphanumeric None ) (Options : ) ()
         When the user selects last editable cell with column header: "Act"
         Then the user adds the text "ZOH" in selected cell
-        And the user hits tab
 
         # Field : Dim. (Screen : ATB2 / DIME) (Data type : C Short integer None ) (Options : z+) () (!! Mandatory field !!)
         When the user selects last editable cell with column header: "Dim."
@@ -69,16 +69,22 @@ Feature: FEATURE ATP_GESATB_OATB
         Then the user adds the text <DESCRIPTION> in selected cell
         And the user hits tab
 
+        #When the user selects the data table in the popup
+        #Then the user selects cell with text: "New text" and column header: ""
+        #And the user clicks on the selected cell
+
+        #And the user clicks the "Ok" option in the alert box
+        #And the user hits tab
+
         # Field : Long title (Screen : ATB2 / INTITLONG) (Data type : ATT Alphanumeric None ) (Options : ) ()
         When the user selects last editable cell with column header: "Abbreviated title"
         Then the user adds the text <DESCSHORT> in selected cell
+        And the user hits tab
 
         # Field : Long title (Screen : ATB2 / INTITLONG) (Data type : ATT Alphanumeric None ) (Options : ) ()
         When the user selects last editable cell with column header: "Long title"
         Then the user adds the text <DESCLONG> in selected cell
-
-        # Exit Table
-        And the user hits tab
+        And the user hits enter
 
         # Button Save
         When the user clicks the "Save" main action button on the right panel
@@ -90,11 +96,11 @@ Feature: FEATURE ATP_GESATB_OATB
 
 
         Examples:
-            | TBLNAME      | CODZONE    | CODTYP | LONG | DIME | DESCRIPTION      | DESCSHORT  | DESCLONG         |
-            | "ITMSALES"   | "Z1ITSFLD" | "A"    | "5"  | "1"  | "Sales Field"    | "Sls Fld"  | "Sales Field"    |
-            | "ITMFACILIT" | "Z1ITFFLD" | "A"    | "5"  | "1"  | "Site Field"     | "Site Fld" | "Site Field"     |
-            | "BPCUSTOMER" | "Z1BPCFLD" | "A"    | "5"  | "1"  | "Customer Field" | "Cust Fld" | "Customer Field" |
-            | "BPSUPPLIER" | "Z1BPSFLD" | "A"    | "5"  | "1"  | "Supplier Field" | "Sup Fld"  | "Supplier Field" |
+            | TBLNAME      | CODZONE   | CODTYP | LONG | DIME | DESCRIPTION      | DESCSHORT   | DESCLONG         |
+            | "ITMSALES"   | "ZITSFLD" | "A"    | "5"  | "1"  | "Sales Field"    | "Sales Fld" | "Sales Field"    |
+            | "ITMFACILIT" | "ZITFFLD" | "A"    | "5"  | "1"  | "Site Field"     | "Site Fld"  | "Site Field"     |
+            | "BPCUSTOMER" | "ZBPCFLD" | "A"    | "5"  | "1"  | "Customer Field" | "Cust Fld"  | "Customer Field" |
+            | "BPSUPPLIER" | "ZBPSFLD" | "A"    | "5"  | "1"  | "Supplier Field" | "Sup Fld"   | "Supplier Field" |
 
 
     # #############################################################################
@@ -102,13 +108,6 @@ Feature: FEATURE ATP_GESATB_OATB
     # #############################################################################
 
 
-
-    #       When the user selects the data table in the popup
-    #     Then the user selects cell with text: "New text" and column header: ""
-    #       And the user clicks on the selected cell
-
-    #      And the user clicks the "Ok" option in the alert box
-    #     And the user hits tab
 
     # #############################################################################
     Scenario: Close page
@@ -122,4 +121,3 @@ Feature: FEATURE ATP_GESATB_OATB
 
         # Disconnection
         And the user logs-out from the system
-
