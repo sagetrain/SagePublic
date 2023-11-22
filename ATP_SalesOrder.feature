@@ -17,14 +17,8 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
 
         # Connection
         Given the user is logged into Sage X3 with "param:loginType" using user name "param:loginUserName" and password "param:loginPassword"
-        And the user changes the main language code to "en-US"
         When the user selects the "param:endPointName1" entry on endpoint panel
         Then the "param:endPointName1" endpoint is selected
-
-
-    # #############################################################################
-    Scenario: Creation Object Orders
-        # #############################################################################
 
         Given the user opens the "GESSOH" function
 
@@ -35,25 +29,10 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
 
         Then the "Sales order ALL : Full entry" screen is displayed
 
-
-    # #############################################################################
-    Scenario: New Order management (Sales order ALL : Full entry)
-        # #############################################################################
-
         # Button New
         When the user clicks the "New" main action button on the right panel
         And the user waits 1 seconds
 
-
-    # #############################################################################
-    Scenario: Header (SOH0)
-        # #############################################################################
-
-        # #############################################################################
-        # Header (Screen : SOH0)
-        # #############################################################################
-
-        # Field : Sales site (Screen : SOH0 / SALFCY) (Data type : FCY Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
         Given the user selects the text field with name: "Sales site"
         When the user writes "NA023" to the selected text field
         Then the value of the selected text field is "NA023"
@@ -102,10 +81,6 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
         When the user selects last fixed cell with header: "Product"
         Then the user adds the text <ITMREF> in selected cell
 
-        # Field : Ship site (Screen : WK2ALL4 / DSTOFCY) (Data type : FCY Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
-        When the user selects last editable cell with column header: "Ship site  "
-        Then the user adds the text <DSTOFCY> in selected cell
-
         # Field : Ordered qty. (Screen : WK2ALL4 / QTY) (Data type : QTY Decimal None ) (Options : +) () (!! Mandatory field !!)
         When the user selects last editable cell with column header: "Ordered qty."
         Then the user adds the text <QTY> in selected cell
@@ -114,18 +89,13 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
         And the user hits enter
 
         Examples:
-            | ITMREF   | DSTOFCY | QTY |
-            | "FIN501" | "NA023" | "1" |
-            | "FIN502" | "NA023" | "1" |
+            | ITMREF   | QTY |
+            | "FIN501" | "1" |
+            | "FIN502" | "1" |
     # #############################################################################
     Scenario: End Scenario Outline
-    # #############################################################################
-
-
-
-    # #############################################################################
-    Scenario: Create Order management (Sales order ALL : Full entry)
         # #############################################################################
+
 
         # Button Create
         When the user clicks the "Create" main action button on the right panel
@@ -133,16 +103,7 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
 
         Then a confirmation dialog appears with the message "Record has been created"
 
-
-    # #############################################################################
-    Scenario: Close page Order management (Sales order ALL : Full entry)
-        # #############################################################################
-
         Then the user clicks the Close page action icon on the header panel
-
-    # #############################################################################
-    Scenario: Disconnection
-        # #############################################################################
 
         # Disconnection
         And the user logs-out from the system
