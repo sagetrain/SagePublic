@@ -114,9 +114,9 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
         And the user hits enter
 
         Examples:
-            | ITMREF   | DSTOFCY | SAU  | QTY | SAUSTUCOE | VACITM1 | DBPAADD |
-            | "FIN501" | "NA023" | "DR" | "1" | "1"       | "NOR"   | "CORP"  |
-
+            | ITMREF   | DSTOFCY | QTY |
+            | "FIN501" | "NA023" | "1" |
+            | "FIN502" | "NA023" | "1" |
     # #############################################################################
     Scenario: End Scenario Outline
     # #############################################################################
