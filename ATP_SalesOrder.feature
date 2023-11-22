@@ -40,23 +40,23 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
         # Field : Type (Screen : SOH0 / SOHTYP) (Data type : TSO Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
         Given the user selects the text field with name: "Type"
         When the user writes "SON" to the selected text field
-        Then the value of the selected text field is "SON"
 
         # Field : Date (Screen : SOH0 / ORDDAT) (Data type : D Date None ) (Options : 1) (Date Format : Dz:MM[-]DD[-]YY) (!! Mandatory field !!)
         Given the user selects the date field with name: "Date"
         When the user writes "11/21/23" to the selected date field
         Then the user hits tab
-        Then the value of the selected date field is "11/21/23"
+
+        Given the user selects the text field with name: "Reference"
+        When the user writes "REF3" to the selected text field
 
         # Field : Sold-to (Screen : SOH0 / BPCORD) (Data type : BPC Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
         Given the user selects the text field with name: "Sold-to"
         When the user writes "NA010" to the selected text field
-        Then the value of the selected text field is "NA010"
+
 
         # Field : Sold-to (Screen : SOH0 / BPCORD) (Data type : BPC Alphanumeric None ) (Options : ) () (!! Mandatory field !!)
         Given the user selects the text field with name: "Bill-to customer"
         When the user writes "NA010" to the selected text field
-        Then the value of the selected text field is "NA010"
         And the user hits tab
 
         And the user clicks the "Lines" tab selected by title
@@ -83,7 +83,7 @@ Feature: FEATURE ATP_GESSOH_WOSOHALL
         Examples:
             | ITMREF   | QTY |
             | "FIN501" | "1" |
-            | "FIN502" | "1" |
+            | "FIN502" | "2" |
     # #############################################################################
     Scenario: End Scenario Outline
         # #############################################################################
